@@ -27,8 +27,12 @@
 
   /* ===== HEADER (separado del hero) ===== */
   .topbar{position:absolute;top:0;left:0;right:0;z-index:6;padding:22px 0}
-  .topbar .wrap{display:flex;align-items:center;justify-content:flex-start}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between}
   .topbar .logo-img{width:min(240px,58vw);height:auto}
+  .btn-login{background:var(--olive-soft);color:#F6F2E7;padding:12px 26px;border-radius:6px;
+    font-family:'Jost';font-weight:400;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;
+    transition:background .25s ease,transform .25s ease;white-space:nowrap}
+  .btn-login:hover{background:#7d8040;transform:translateY(-1px)}
 
   /* ===== HERO ===== */
   .hero{position:relative;min-height:92vh;display:flex;align-items:center;color:#F6F2E7;overflow:hidden;padding:150px 0 110px}
@@ -127,8 +131,7 @@
 
   /* ===== MOBILE ===== */
   @media(max-width:760px){
-    .wrap{padding:0 22px}
-    .topbar{padding:18px 0} .topbar .wrap{justify-content:center} .topbar .logo-img{width:min(210px,56vw)}
+    .topbar{padding:18px 0} .topbar .wrap{justify-content:space-between} .topbar .logo-img{width:min(210px,56vw)} .btn-login{padding:10px 18px;font-size:.72rem}
     .hero{min-height:86vh;padding:130px 0 84px}
     .hero-inner{text-align:center;margin:0 auto}
     .hero-inner p.tag{font-size:1.55rem;margin-bottom:26px} .hero-btns{justify-content:center}
@@ -150,7 +153,10 @@
 
 <!-- HEADER -->
 <header class="topbar">
-  <div class="wrap"><img class="logo-img" src="images/logo-coli.png" alt="Colíma Cruz Estudio"></div>
+  <div class="wrap">
+    <img class="logo-img" src="images/logo-colima.png" alt="Colíma Cruz Estudio">
+    <a class="btn-login" href="https://vellum.studiowd.com.mx/panel-cliente/" target="_blank" rel="noopener">Iniciar Sesión</a>
+  </div>
 </header>
 
 <!-- HERO -->
